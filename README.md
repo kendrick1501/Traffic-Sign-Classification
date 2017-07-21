@@ -1,13 +1,8 @@
 # Traffic-Sign-Classification
 
-# Self-Driving Car Engineer Nanodegree
+# UDACITY Self-Driving Car Nanodegree Program
 
 ## Project # 2: Deep Learning - Build a Traffic Sign Recognition Classifier
-
-
-**Name: Kendrick Amezquita**
-
-**Email: kendrickamezquita@gmail.com**
 
 ---
 
