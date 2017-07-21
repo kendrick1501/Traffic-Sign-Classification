@@ -1,9 +1,6 @@
 # Traffic-Sign-Classification
-
 # UDACITY Self-Driving Car Nanodegree Program
-
 ## Project # 2: Deep Learning - Build a Traffic Sign Recognition Classifier
-
 ---
 
 **Build a Traffic Sign Recognition Project**
@@ -37,9 +34,9 @@ The goals / steps of this project are the following:
 [image16]: ./figures/viz_conv1_img5.png "First Convolutional layer Traffic Sign 5"
 
 ---
-###Data Set Summary & Exploration
+### Data Set Summary & Exploration
 
-####1. Provide a basic summary of the data set. In the code, the analysis should be done using python, numpy and/or pandas methods rather than hardcoding results manually.
+#### 1. Provide a basic summary of the data set. In the code, the analysis should be done using python, numpy and/or pandas methods rather than hardcoding results manually.
 
 To obtain the basic information of the data set, I followed the approach we've been using in previous lessons, i.e., numpy method *shape*. 
 
@@ -49,7 +46,7 @@ To obtain the basic information of the data set, I followed the approach we've b
 * The shape of a traffic sign image is 32x32x3
 * The number of unique classes/labels in the data set is 43
 
-####2. Include an exploratory visualization of the dataset.
+#### 2. Include an exploratory visualization of the dataset.
 
 The following figure depicts how the different classes are distributed in the training, validation, and test sets. Clearly, the sets have approximately the same data distribution with labels two, one, and thirteen having the highest frequency.
 
@@ -57,9 +54,9 @@ The following figure depicts how the different classes are distributed in the tr
 
 In view of the data distribution, I believe the convolutional neural network lacks information to guarantee the same level of prediction for all classes.
 
-###Design and Test a Model Architecture
+### Design and Test a Model Architecture
 
-####1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
+#### 1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
 
 The images provided in the data set are color images in RGB format. For the current project, such color information is not required, and so the images were converted to grayscale. This pre-processing step lessens the computational burden by a factor of 3.
 
@@ -79,7 +76,7 @@ The additional data were generated randomly in such a way that labels with less 
 
 The new size of the training set is 69598.
 
-####2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
+#### 2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
 
 The convolutional neural network architecture is described in the following table:
 
@@ -101,7 +98,7 @@ The convolutional neural network architecture is described in the following tabl
 | Dropout                 |                                                                               |
 |Fully connected	| outputs 43 							|
 
-####3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
+#### 3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
 
 To train the model, I used the augmented training set introduced before. As for the optimizer, I followed the suggestion from the LeNet-Lab and used ADAM. Due to computing limitations, I set the batch size to 128 with five epochs. The learning rate is set to 0.001. The initialization of weights was performed with a normal distribution function with zero mean and 0.05 of standard deviation. During the training process, the keep probability of the dropout layers was chosen as 0.35.
 
@@ -123,9 +120,9 @@ The depth of the third layer barely improves the performance of the network for 
 
 The activation functions of the fully connected layers are chosen as a dropout to avoid eventual overfitting of the data set. This choice turned out to be relevant to guarantee good prediction performance during the test process, given that the keep probability parameter played a major role in improving the training and validation accuracy. Low values of keep probability (<0.5) increase the prediction accuracy of the convolutional neural network throughout all data set, despite the strong distortion in the training set due to the augmented images.
 
-###Test a Model on New Images
+### Test a Model on New Images
 
-####1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
+#### 1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
 
 A new data set composed of 30 traffic signs images downloaded from the web is utilized to further evaluate the performance of MKNet. Five examples of the new data set are shown next.
 
@@ -137,7 +134,7 @@ For instance, the first image might be confused with Keep Left traffic sign (As 
 
 In the whole set, the images present an important level of noise which may further complicate the classification process.
 
-####2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
+#### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
 Despite the confusing or incomplete features presented in the images of the new dataset, the MKNet performed satisfactorily with an overall prediction accuracy of 86.67%. Such a result compares favorably with the test accuracy and evidences the capability of the model architecture for traffic sign classification. 
 
@@ -148,7 +145,7 @@ Also, the low precision on class 27 (*Pedestrians* traffic sign) on both cases m
 ![alt text][image7] 
 ![alt text][image8] 
 
-####3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
+#### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
 To evaluate the model confidence in classifying traffic signs, the above five images of the new dataset were used.
 
