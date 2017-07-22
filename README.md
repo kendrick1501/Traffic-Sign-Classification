@@ -129,7 +129,7 @@ In the whole set, the images present an important level of noise which may furth
 
 Despite the confusing or incomplete features presented in the images of the new data set, the MKNet performed satisfactorily with an overall prediction accuracy of 86.67%. Such a result compares favorably with the test accuracy and evidences the capability of the model architecture for traffic sign classification. 
 
-Considering the precision and recall of MKNet on both the test set and the new data set illustrated below, it can be noticed that labels 25, 27, and 33 exhibit similar precision and recall relation, which seems to validate the performance of the MKNet on different data sets. 
+Considering the [precision and recall](https://en.wikipedia.org/wiki/Precision_and_recall) of MKNet on both the test set and the new data set illustrated below, it can be noticed that labels 25, 27, and 33 exhibit similar precision and recall relation, which seems to validate the performance of the MKNet on different data sets. 
 
 Also, the low precision on class 27 (*Pedestrians* traffic sign) on both cases may evidence the necessity of augmenting the examples of this traffic sign in the training set.
 
