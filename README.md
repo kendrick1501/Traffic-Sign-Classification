@@ -13,14 +13,14 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./figures/viz_dataset.png "Dataset Visualization"
+[image1]: ./figures/viz_dataset.png "Data set Visualization"
 [image2]: ./figures/pre_processing_input.png "Training Data set Images"
 [image3]: ./figures/pre_processing_output.png "Pre-processing Output"
-[image4]: ./figures/viz_aug_dataset.png "Augmented Dataset Visualization"
+[image4]: ./figures/viz_aug_dataset.png "Augmented Data set Visualization"
 [image5]: ./figures/augmented_training_set.png "Augmented Training Set"
-[image6]: ./figures/new_dataset_examples.png "New Dataset example images"
+[image6]: ./figures/new_dataset_examples.png "New Data set example images"
 [image7]: ./figures/pres_recall_test.png "Precision and Recall Test Set"
-[image8]: ./figures/pres_recall_newdata.png "Precision and Recall New Dataset"
+[image8]: ./figures/pres_recall_newdata.png "Precision and Recall New Data set"
 [image9]: ./figures/softmax_img1.png "Traffic Sign 1"
 [image10]: ./figures/softmax_img2.png "Traffic Sign 2"
 [image11]: ./figures/softmax_img3.png "Traffic Sign 3"
@@ -45,11 +45,11 @@ The following figure depicts how the different classes are distributed in the tr
 
 ![alt text][image1]
 
-In view of the data distribution, more images should be added so as to balance the number of examples for each class in the dataset.
+In view of the data distribution, more images should be added so as to balance the number of examples for each class in the data set.
 
 ### Design and Test a Model Architecture
 
-The images provided in the dataset are color images in RGB format ([German Traffic Signs](http://benchmark.ini.rub.de/?section=gtsrb&subsection=dataset)). For the current project, such color information is not required, and so the images were converted to grayscale. This pre-processing step lessens the computational burden by a factor of 3.
+The images provided in the data set are color images in RGB format ([German Traffic Signs](http://benchmark.ini.rub.de/?section=gtsrb&subsection=dataset)). For the current project, such color information is not required, and so the images were converted to grayscale. This pre-processing step lessens the computational burden by a factor of 3.
 
 The grayscale images are then normalized to prevent losing information due to high-contrast pixels. The normalized data is guaranteed to have zero mean and equal variance.
 
@@ -58,7 +58,7 @@ The outcome of the pre-processing stage is illustrated in the following figure.
 ![alt text][image2]
 ![alt text][image3]
 
-Given the uneven distribution of traffic signs examples in the dataset, the training set was augmented in an attempt to provide more information on those classes with less representation.
+Given the uneven distribution of traffic signs examples in the data set, the training set was augmented in an attempt to provide more information on those classes with less representation.
 
 The additional data were generated randomly in such a way that labels with less representation would have more probability of being augmented. This new data is composed of images of the training set randomly rotated with added random noise. Below, the new distribution of the training set is depicted along with an example of the additional images.
 
@@ -109,7 +109,7 @@ The size of the layers in the architecture was chosen considering the performanc
 
 The depth of the third layer barely improves the performance of the network for values greater than 25. As for the first layer, a fixed value of 16 filters was chosen with good results. 
 
-The activation functions of the fully connected layers are chosen as a dropout to avoid eventual overfitting of the data. This choice turned out to be relevant to guarantee good prediction performance during the test process, given that the keep probability parameter played a major role in improving the training and validation accuracy. Low values of keep probability (<0.5) increase the prediction accuracy of the convolutional neural network throughout all dataset, despite the strong distortion in the training set due to the augmented images.
+The activation functions of the fully connected layers are chosen as a dropout to avoid eventual overfitting of the data. This choice turned out to be relevant to guarantee good prediction performance during the test process, given that the keep probability parameter played a major role in improving the training and validation accuracy. Low values of keep probability (<0.5) increase the prediction accuracy of the convolutional neural network throughout all data set, despite the strong distortion in the training set due to the augmented images.
 
 ### Test a Model on New Images
 
@@ -127,9 +127,9 @@ In the whole set, the images present an important level of noise which may furth
 
 #### Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set.
 
-Despite the confusing or incomplete features presented in the images of the new dataset, the MKNet performed satisfactorily with an overall prediction accuracy of 86.67%. Such a result compares favorably with the test accuracy and evidences the capability of the model architecture for traffic sign classification. 
+Despite the confusing or incomplete features presented in the images of the new data set, the MKNet performed satisfactorily with an overall prediction accuracy of 86.67%. Such a result compares favorably with the test accuracy and evidences the capability of the model architecture for traffic sign classification. 
 
-Considering the precision and recall of MKNet on both the test set and the new dataset illustrated below, it can be noticed that labels 25, 27, and 33 exhibit similar precision and recall relation, which seems to validate the performance of the MKNet on different datasets. 
+Considering the precision and recall of MKNet on both the test set and the new data set illustrated below, it can be noticed that labels 25, 27, and 33 exhibit similar precision and recall relation, which seems to validate the performance of the MKNet on different data sets. 
 
 Also, the low precision on class 27 (*Pedestrians* traffic sign) on both cases may evidence the necessity of augmenting the examples of this traffic sign in the training set.
 
@@ -138,7 +138,7 @@ Also, the low precision on class 27 (*Pedestrians* traffic sign) on both cases m
 
 #### Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction.
 
-To evaluate the model confidence in classifying traffic signs, the above five images of the new dataset were used.
+To evaluate the model confidence in classifying traffic signs, the above five images of the new data set were used.
 
 For the first image, the model is only 57.4% sure about the traffic sign. This result is expected given the noise and confusing features in the classified image.
 
@@ -162,7 +162,7 @@ In the last example, the model predicts the traffic sign with very high confiden
 
 #### Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
 
-The following figures illustrate the feature maps of the first convolutional layer for the second, third, and fifth images of the new dataset example.
+The following figures illustrate the feature maps of the first convolutional layer for the second, third, and fifth images of the new data set example.
 
 ![alt text][image14] 
 ![alt text][image15] 
