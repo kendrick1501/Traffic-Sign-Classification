@@ -172,4 +172,4 @@ The convolutional neural network seems to utilize the edges and the content of t
 
 In the feature maps of the fifth image, MKNet clearly detects the edges of the traffic sign and seems to represent the vehicle in it by a black area within the triangle in some feature maps.
 
-In the case of image 2, the prediction is based on the circular edges and a sortf of representation of the numbers in the traffic sign.
+In the case of image 2, the prediction is based on the circular edges and a sort of representation of the numbers in the traffic sign.
