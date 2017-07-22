@@ -162,7 +162,7 @@ In the last example, the model predicts the traffic sign with very high confiden
 
 #### Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
 
-The following figures illustrate the feature maps of the first convolutional layer for the second, third, and fifth images of the new data set example.
+The following figures illustrate the feature maps of the first convolutional layer for the second, third, and fifth images of the above example.
 
 ![alt text][image14] 
 ![alt text][image15] 
