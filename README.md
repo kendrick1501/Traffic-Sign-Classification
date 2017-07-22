@@ -168,7 +168,7 @@ The following figures illustrate the feature maps of the first convolutional lay
 ![alt text][image15] 
 ![alt text][image16] 
 
-The convolutional neural network seems to utilized the edges and the content of the traffic sign to classified the image. For instance, notice how the feature map 1 of image 3, corresponding to the *Road Work* traffic sign, seems to has a representation of the "worker on the road." 
+The convolutional neural network seems to utilize the edges and the content of the traffic sign to classify the image. For instance, notice how the feature map 1 of image 3, corresponding to the *Road Work* traffic sign, seems to has a representation of the "worker on the road." 
 
 In the feature maps of the fifth image, MKNet clearly detects the edges of the traffic sign and seems to represent the vehicle in it by a black area within the triangle.
 
