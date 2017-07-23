@@ -115,7 +115,7 @@ The activation functions of the fully connected layers are chosen as a dropout t
 
 #### Choose five German traffic signs found on the web. For each image, discuss what quality or qualities might be difficult to classify.
 
-A new data set composed of 30 traffic signs images downloaded from the web [[web-test-images](https://github.com/kendrick1501/Traffic-Sign-Classification/tree/master/web-test-images)] is utilized to further evaluate the performance of MKNet. Five examples of the new data set are shown next.
+A new dataset composed of 30 traffic signs images downloaded from the web [[web-test-images](https://github.com/kendrick1501/Traffic-Sign-Classification/tree/master/web-test-images)] is utilized to further evaluate the performance of MKNet. Five examples of the new dataset are shown next.
 
 ![alt text][image6] 
 
@@ -127,9 +127,9 @@ In the whole set, the images present an important level of noise which may furth
 
 #### Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set.
 
-Despite the confusing or incomplete features presented in the images of the new data set, the MKNet performed satisfactorily with an overall prediction accuracy of 86.67%. Such a result compares favorably with the test accuracy and evidences the capability of the model architecture for traffic sign classification. 
+Despite the confusing or incomplete features presented in the images of the new dataset, the MKNet performed satisfactorily with an overall prediction accuracy of 86.67%. Such a result compares favorably with the test accuracy and evidences the capability of the model architecture for traffic sign classification. 
 
-Considering the [precision and recall](https://en.wikipedia.org/wiki/Precision_and_recall) of MKNet on both the test set and the new data set illustrated below, it can be noticed that labels 25, 27, and 33 exhibit similar precision and recall relation, which seems to validate the performance of the MKNet on different data sets. 
+Considering the [precision and recall](https://en.wikipedia.org/wiki/Precision_and_recall) of MKNet on both the test set and the new dataset depicted below, it can be noticed that labels 25, 27, and 33 exhibit similar precision and recall relation, which seems to validate the performance of the MKNet on different datasets. 
 
 Also, the low precision on class 27 (*Pedestrians* traffic sign) on both cases may evidence the necessity of augmenting the examples of this traffic sign in the training set.
 
